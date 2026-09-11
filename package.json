@@ -3,9 +3,9 @@
   "type": "module",
   "packageManager": "pnpm@8.15.9",
   "pnpm": {
-    "onlyBuiltDependencies": ["sharp"]
+    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
   },
- "engines": {
+  "engines": {
     "node": ">=16.0.0",
     "pnpm": ">=7.0.0",
     "npm": "please use pnpm"
