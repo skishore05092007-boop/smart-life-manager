@@ -1,0 +1,64 @@
+type http_request_result = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type http_header = 
+ record {
+   name: text;
+   value: text;
+ };
+type UserPreferences = 
+ record {
+   notifications: bool;
+   theme: text;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: http_request_result;
+ };
+type ParsedTransaction = 
+ record {
+   amount: float64;
+   category: text;
+   date: text;
+   displayMessage: text;
+   merchant: text;
+   transactionType: text;
+ };
+type ParseResult = 
+ variant {
+   err: text;
+   ok: ParsedTransaction;
+ };
+type NoteEntry = 
+ record {
+   content: text;
+   title: text;
+ };
+service : {
+  _transformResponse: (input: TransformationInput) ->
+   (TransformationOutput) query;
+  deleteNote: (id: text) -> ();
+  getAllNotesSorted: () -> (vec NoteEntry) query;
+  getNote: (id: text) -> (NoteEntry) query;
+  getNotesByKeyword: (keyword: text) -> (vec NoteEntry) query;
+  getNotesByTheme: (theme: text) -> (vec NoteEntry) query;
+  getOpenAIKeyStatus: () -> (record {isSet: bool;}) query;
+  getPreferences: (userId: text) -> (UserPreferences) query;
+  noteExists: (id: text) -> (bool) query;
+  parseTransaction: ("text": text) -> (ParseResult);
+  saveNote: (id: text, title: text, content: text) -> ();
+  savePreferences: (userId: text, theme: text, notifications: bool) -> ();
+  searchNotes: (searchTerm: text) -> (vec NoteEntry) query;
+  setOpenAIKey: (key: text) -> ();
+  updateNotifications: (userId: text, notifications: bool) -> ();
+}

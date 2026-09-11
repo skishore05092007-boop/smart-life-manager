@@ -1,0 +1,30 @@
+{
+  "overview": "Smart Life OS is a privacy-first, gamified finance and life management PWA for students and young professionals, now featuring an Autonomous Wealth Engine with 5 AI-powered financial modules.",
+  "features": [
+    "Autonomous Wealth Engine tab with 5 AI modules",
+    "Predictive 30-day cash-flow forecast from expense history",
+    "Micro-surplus harvesting with SIP top-up suggestions",
+    "Voice-activated complex financial scenario analysis",
+    "Dynamic EMI and loan rate optimization",
+    "Tax-loss harvesting agent for investment portfolio",
+    "Voice expense tracker with waveform visualization",
+    "SIP and EMI calculators",
+    "Savings goals with progress tracking",
+    "Gamified streaks and wealth score",
+    "Budget planners (50/30/20 and 60/30/10)",
+    "Live currency converter",
+    "PWA with offline support"
+  ],
+  "category": "finance-app",
+  "tags": [
+    "fintech",
+    "personal-finance",
+    "pwa",
+    "indian-finance",
+    "gamification",
+    "voice-input",
+    "wealth-management",
+    "students"
+  ],
+  "last_updated": "2026-06-04T11:10:57.168Z"
+}
