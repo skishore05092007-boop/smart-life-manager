@@ -1,7 +1,7 @@
 {
   "name": "@caffeine/template-app",
   "type": "module",
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@10.10.0",
   "pnpm": {
     "onlyBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
   },
